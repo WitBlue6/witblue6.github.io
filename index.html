@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuohao Liu | Personal Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --bg-deep: #0a192f;
+            --bg-light: #112240;
+            --teal: #64ffda;
+            --slate: #ccd6f6;
+            --gray: #8892b0;
+            --blue-accent: #3b82f6;
+        }
+
+        body { 
+            background-color: var(--bg-deep); 
+            color: var(--slate); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+        }
+
+        .sidebar { background-color: var(--bg-light); }
+        
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .dot { 
+            color: var(--blue-accent); 
+            margin-left: 2px;
+        }
+
+        .card { 
+            background-color: var(--bg-light); 
+            border: 1px solid #233554; 
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover { 
+            border-color: var(--teal); 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+
+        .tag { 
+            background-color: rgba(100, 255, 218, 0.1); 
+            color: var(--teal); 
+            border: 1px solid var(--teal); 
+            font-size: 0.7rem; 
+            font-weight: 600;
+            padding: 0.2rem 0.75rem; 
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .highlight { color: var(--teal); }
+        
+        .sidebar-header {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--teal);
+            font-weight: 700;
+            border-bottom: 1px solid #233554;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        ul li::before {
+            content: "▹";
+            color: var(--teal);
+            position: absolute;
+            left: 0;
+        }
+        
+        .custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row">
+
+    <aside class="w-full md:w-1/4 sidebar p-10 flex flex-col border-r border-slate-800">
+        <div class="mb-10 flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="w-32 h-32 rounded-full border-4 border-blue-500/30 shadow-2xl bg-slate-700 flex items-center justify-center mb-6 overflow-hidden">
+                <img src="raw/images/lzh.jpg" alt="Zuohao Liu" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-3xl font-bold text-white mb-1">Zuohao Liu</h1>
+            <p class="text-gray-400 text-sm font-light italic">Incoming MS @ PKU</p>
+            <p class="text-blue-400 text-xs mt-4 font-mono font-medium tracking-tight">Future works on LLM Agent & Quant</p>
+        </div>
+
+        <div class="space-y-10 text-sm">
+            <div>
+                <h3 class="sidebar-header">Education</h3>
+                <div class="mb-5">
+                    <p class="text-white font-bold text-base">Peking University</p>
+                    <p class="text-gray-400">School of Software & Microelectronics</p>
+                    <p class="text-gray-500 text-xs mt-1">2026.09 - 2029.06</p>
+                </div>
+                <div>
+                    <p class="text-white font-bold text-base">Beijing Institute of Technology</p>
+                    <p class="text-gray-400 text-xs">Electronic Information Engineering</p>
+                    <p class="text-teal-400 text-xs font-semibold mt-1">GPA: 3.85/4.0 (Rank: 3/174)</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="sidebar-header">Contact</h3>
+                <div class="space-y-3">
+                    <a href="mailto:kerman_pku@163.com" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-envelope mr-3 text-blue-400 text-base"></i> kerman_pku@163.com
+                    </a>
+                    <a href="https://github.com/WitBlue6" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-colors">
+						<i class="fab fa-github mr-3 text-blue-400 text-base"></i> WitBlue6
+					</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-8 md:p-20 max-w-6xl">
+        
+        <section class="mb-20">
+            <h2 class="section-title">Research Interests<span class="dot">.</span></h2>
+            <div class="text-lg text-gray-400 max-w-4xl">
+                My research interests lie at the intersection of <strong class="text-white">Agentic Artificial Intelligence</strong> and <strong class="text-white">Quantitative Finance</strong>. I am dedicated to exploring how Large Language Models can reshape our world.
+                
+                <ul class="mt-6 space-y-4 custom-list">
+                    <li>
+                        <strong class="text-white">Agent Memory Mechanisms:</strong> Researching long-short term memory architectures for LLM agents to maintain semantic consistency and reasoning logic in long-sequence financial analysis.
+                    </li>
+                    <li>
+                        <strong class="text-white">LLM for Finance:</strong> Exploring the use of LLMs for automated factor engineering and quantitative trading signal generation (Alpha-Factor Mining).
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-8">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">Quant Finance</span>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="section-title">Internship<span class="dot">.</span></h2>
+            <div class="card p-8 rounded-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-1">ByteDance | AI Data Intern</h3>
+                        <p class="text-blue-400 text-sm font-semibold tracking-wide uppercase">LLM Dept. (Code Direction)</p>
+                    </div>
+                    <span class="text-gray-500 font-mono text-sm mt-2 md:mt-0">Nov 2025 - Present</span>
+                </div>
+                <ul class="text-gray-400 space-y-3 text-sm custom-list">
+                    <li>Built automated fact-checking workflows utilizing <span class="highlight">Function Call & MCP</span> architectures.</li>
+                    <li>Developed <span class="highlight">FaaS-based verification tools</span>, achieving a <span class="highlight">71% increase</span> in operational efficiency.</li>
+                    <li>Executed sensitivity intention classification for "Doubao" super-mode, achieving <span class="highlight">90% consistency</span> in high-quality SFT datasets.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="section-title">Selected Projects<span class="dot">.</span></h2>
+            <div class="space-y-8">
+                
+                <div class="card p-8 rounded-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">Health Monitoring Model Based on Autoencoder & LLM</h3>
+                        <span class="tag">Project Leader</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        A real-time diagnosis system for electronic equipment health management.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 text-xs text-gray-400 mb-6">
+                        <div class="space-y-2">
+                            <p><strong class="text-white">● AE + PID Threshold:</strong> Self-supervised prediction with latency < 300ms.</p>
+                            <p><strong class="text-white">● RAG Enhanced:</strong> Improved model generation quality via model fine-tuning.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p><strong class="text-white">● Edge Deployment:</strong> Accelerated via Ascend MindIE Docker (vLLM).</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-400 font-medium"><i class="fas fa-paper-plane mr-2"></i> EI Paper Accepted | Patent Filed.</p>
+                </div>
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white">Small Target Fusion Detection</h3>
+                        <span class="tag">Technical Lead</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Multimodal fusion schemes for "low-slow-small" target detection in complex interference environments.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li>Enhanced YOLOv8 with <span class="highlight">CA Attention</span> and P2 head; accuracy (IoU > 0.7) reached 138% of baseline.</li>
+                        <li>Implemented 1D Convolution for feature fusion and coordinate transformation for data alignment.</li>
+                    </ul>
+                    <p class="text-xs text-yellow-500 font-medium"><i class="fas fa-trophy mr-2"></i> National 3rd Prize, "Challenge Cup" Special Competition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Honors & Awards<span class="dot">.</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+                    <p class="text-white font-bold mb-1 text-lg">National Scholarship</p>
+                    <p class="text-gray-500 text-sm">Awarded for two consecutive years for top academic performance.</p>
+                </div>
+                <div class="p-6 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+                    <p class="text-white font-bold mb-1 text-lg">Integrated Circuit Competition</p>
+                    <p class="text-blue-400 text-sm font-semibold">Beijing Municipal 2nd Prize Winner.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
