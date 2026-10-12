@@ -175,6 +175,72 @@
         <section class="mb-20">
             <h2 class="section-title">Selected Projects<span class="dot">.</span></h2>
             <div class="space-y-8">
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">MoE LLM Lab</h3>
+                        <span class="tag">Model Training</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A readable PyTorch implementation spanning language-model training, visual adaptation, and post-training.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li><strong class="text-white">Text &amp; Vision:</strong> BPE tokenizer, sparse MoE pretraining and SFT, and projector + LoRA visual adaptation.</li>
+                        <li><strong class="text-white">Post-training:</strong> DPO, reward modeling, PPO and GRPO, with training diagnostics and checkpoint recovery.</li>
+                    </ul>
+                    <a href="https://github.com/WitBlue6/moe-llm-lab" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
+                </div>
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">MemSearch RL</h3>
+                        <span class="tag">Research Prototype</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A research environment for memory-enhanced retrieval agents operating under a fixed search budget.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li><strong class="text-white">Agent Memory:</strong> Explicit ADD / UPDATE / DELETE / NOOP operations with source-aware memory.</li>
+                        <li><strong class="text-white">Experiments:</strong> HotpotQA evaluation, baseline comparisons, and experimental LoRA SFT / GRPO workflows.</li>
+                    </ul>
+                    <a href="https://github.com/WitBlue6/memsearch-rl" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
+                </div>
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">RISC-V INT8 Assistant</h3>
+                        <span class="tag">RTL Simulation</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">An integer Transformer SoC simulation built around the open-source PicoRV32 core.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li><strong class="text-white">Hardware:</strong> INT8 multiply-accumulate and attention RTL, hardware KV cache, and external-weight tiling.</li>
+                        <li><strong class="text-white">Verification:</strong> Verilator simulation and differential checks against numerical references.</li>
+                    </ul>
+                    <a href="https://github.com/WitBlue6/riscv-int8-assistant" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
+                </div>
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">TextGuard</h3>
+                        <span class="tag">Applied LLM</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Chinese long-text consistency checking and grammar correction with document input and human feedback.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li><strong class="text-white">Workflow:</strong> Entity extraction, consistency checks, and a LangChain-based correction pipeline.</li>
+                        <li><strong class="text-white">Application:</strong> FastAPI and WebSocket progress updates, PDF / DOCX input, and feedback-informed retrieval.</li>
+                    </ul>
+                    <a href="https://github.com/WitBlue6/TextGuard" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
+                </div>
+
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">Truth Checker</h3>
+                        <span class="tag">MCP Workflow</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">An agent workflow for evidence retrieval and structured fact-checking reports.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li><strong class="text-white">Evidence:</strong> Fact decomposition, source retrieval, link reading, and cross-source verification.</li>
+                        <li><strong class="text-white">Integration:</strong> MCP tools and configurable agent / prompt workflows for structured reports.</li>
+                    </ul>
+                    <a href="https://github.com/WitBlue6/Truth_Checker" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
+                </div>
+
                 
                 <div class="card p-8 rounded-xl">
                     <div class="flex justify-between items-start mb-4">
@@ -209,6 +275,36 @@
                         <li>Implemented 1D Convolution for feature fusion and coordinate transformation for data alignment.</li>
                     </ul>
                     <p class="text-xs text-yellow-500 font-medium"><i class="fas fa-trophy mr-2"></i> National 3rd Prize, "Challenge Cup" Special Competition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="section-title">Open Source Contributions<span class="dot">.</span></h2>
+            <div class="space-y-8">
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">Docling | CSV Backend Reliability</h3>
+                        <span class="tag">Merged PR</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Rewind the decoded CSV buffer before repeated dialect detection so reusing a loaded backend preserves the original delimiters and table structure.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li>Added regression coverage for comma, semicolon, tab, and pipe inputs.</li>
+                        <li>Verified repeated conversions preserve cell values and exported documents.</li>
+                    </ul>
+                    <a href="https://github.com/docling-project/docling/pull/4754" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fas fa-code-branch mr-2"></i>Docling #4754 · Merged</a>
+                </div>
+                <div class="card p-8 rounded-xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-3 mb-4">
+                        <h3 class="text-xl font-bold text-white">Docling | Exact EBCDIC Numeric Decoding</h3>
+                        <span class="tag">Merged PR</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Preserve scaled numeric values exactly during EBCDIC decoding, avoiding precision loss caused by the caller's decimal context.</p>
+                    <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
+                        <li>Covered packed and zoned decimal, plus signed and unsigned binary fields.</li>
+                        <li>Checked exact table cells and Markdown exports under different decimal precisions.</li>
+                    </ul>
+                    <a href="https://github.com/docling-project/docling/pull/4759" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fas fa-code-branch mr-2"></i>Docling #4759 · Merged</a>
                 </div>
             </div>
         </section>
