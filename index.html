@@ -99,7 +99,7 @@
                 <img src="raw/images/lzh.jpg" alt="Zuohao Liu" class="w-full h-full object-cover">
             </div>
             <h1 class="text-3xl font-bold text-white mb-1">Zuohao Liu</h1>
-            <p class="text-gray-400 text-sm font-light italic">Incoming MS @ PKU</p>
+            <p class="text-gray-400 text-sm font-light italic">Master's Student @ PKU</p>
             <p class="text-blue-400 text-xs mt-4 font-mono font-medium tracking-tight">Future works on LLM Agent & Quant</p>
         </div>
 
@@ -109,11 +109,13 @@
                 <div class="mb-5">
                     <p class="text-white font-bold text-base">Peking University</p>
                     <p class="text-gray-400 text-xs">School of Software & Microelectronics</p>
-                    <p class="text-teal-400 text-xs font-semibold mt-1">Incoming 2026</p>
+                    <p class="text-gray-400 text-xs mt-1">Electronic Information (Master's)</p>
+                    <p class="text-teal-400 text-xs font-semibold mt-1">2026 - 2029 (Expected)</p>
                 </div>
                 <div>
                     <p class="text-white font-bold text-base">Beijing Institute of Technology</p>
                     <p class="text-gray-400 text-xs">Electronic Information Engineering</p>
+                    <p class="text-gray-400 text-xs mt-1">2022 - 2026 (Bachelor's)</p>
                     <p class="text-teal-400 text-xs font-semibold mt-1">GPA: 3.85/4.0 (Rank: 3/174)</p>
                 </div>
             </div>
@@ -160,14 +162,16 @@
                 <div class="flex flex-col md:flex-row justify-between items-start mb-6">
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-1">ByteDance | AI Data Intern</h3>
-                        <p class="text-blue-400 text-sm font-semibold tracking-wide uppercase">LLM Dept. (Code Direction)</p>
+                        <p class="text-blue-400 text-sm font-semibold tracking-wide uppercase">AI Data &amp; Safety</p>
                     </div>
-                    <span class="text-gray-500 font-mono text-sm mt-2 md:mt-0">Nov 2025 - Present</span>
+                    <span class="text-gray-500 font-mono text-sm mt-2 md:mt-0">Nov 2025 - Apr 2026</span>
                 </div>
                 <ul class="text-gray-400 space-y-3 text-sm custom-list">
-                    <li>Built automated fact-checking workflows utilizing <span class="highlight">Function Call & MCP</span> architectures.</li>
-                    <li>Developed <span class="highlight">FaaS-based verification tools</span>, achieving a <span class="highlight">71% increase</span> in operational efficiency.</li>
-                    <li>Executed sensitivity intention classification for "Doubao" super-mode, achieving <span class="highlight">90% consistency</span> in high-quality SFT datasets.</li>
+                    <li><strong class="text-white">Automated rubric evaluation:</strong> Built an external fact-verification workflow using <span class="highlight">Function Calling and MCP</span> to reduce manual checking of model-generated claims.</li>
+                    <li><strong class="text-white">FaaS delivery:</strong> Implemented verification tools and brought the workflow onto the annotation platform. Post-launch feedback reported a <span class="highlight">71% improvement in workflow efficiency</span> and <span class="highlight">72.7% effectiveness</span> reported by annotators.</li>
+                    <li><strong class="text-white">Seed2.x SFT data pipeline:</strong> Contributed to iteration and maintenance of <span class="highlight">terabyte-scale training-data cleaning</span> pipelines, collaborating with the Seed team on safety filtering and format checks.</li>
+                    <li><strong class="text-white">Data quality debugging:</strong> Investigated roleplay and code-switching issues, reprocessed nonconforming data, and supported production of high-quality merged datasets.</li>
+                    <li><strong class="text-white">Training-data release:</strong> Followed the SFT dataset finalization process end to end and supported day-to-day data-mixture preparation.</li>
                 </ul>
             </div>
         </section>
@@ -181,9 +185,11 @@
                         <h3 class="text-xl font-bold text-white">MoE LLM Lab</h3>
                         <span class="tag">Model Training</span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A readable PyTorch implementation spanning language-model training, visual adaptation, and post-training.</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A PyTorch MoE language model and visual-extension project with approximately 264M parameters, spanning text pretraining, instruction tuning, visual adaptation, and post-training.</p>
                     <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
-                        <li><strong class="text-white">Text &amp; Vision:</strong> BPE tokenizer, sparse MoE pretraining and SFT, and projector + LoRA visual adaptation.</li>
+                        <li><strong class="text-white">Model Architecture:</strong> A 16-layer decoder with GQA, RoPE, RMSNorm, four experts and top-2 routing; a trained 16K BPE tokenizer supports pretraining and full-parameter SFT.</li>
+                        <li><strong class="text-white">Visual Adaptation:</strong> SigLIP-style visual encoding, projector alignment, and Q/V LoRA. Visual adapters are enabled for image inputs and disabled for text-only inputs, with logits checks for text-path consistency.</li>
+                        <li><strong class="text-white">Training Engineering:</strong> DDP with eight-GPU launch support, mixed precision, gradient accumulation, and checkpoints that preserve optimizer state, RNG state and data progress.</li>
                         <li><strong class="text-white">Post-training:</strong> DPO, reward modeling, PPO and GRPO, with training diagnostics and checkpoint recovery.</li>
                     </ul>
                     <a href="https://github.com/WitBlue6/moe-llm-lab" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
@@ -194,11 +200,17 @@
                         <h3 class="text-xl font-bold text-white">MemSearch RL</h3>
                         <span class="tag">Research Prototype</span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A research environment for memory-enhanced retrieval agents operating under a fixed search budget.</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A Qwen2.5-7B-based agent for multi-hop question answering under a fixed retrieval budget and a 512-token evidence-memory limit.</p>
                     <ul class="text-gray-400 text-xs space-y-2 mb-6 custom-list">
-                        <li><strong class="text-white">Agent Memory:</strong> Explicit ADD / UPDATE / DELETE / NOOP operations with source-aware memory.</li>
-                        <li><strong class="text-white">Experiments:</strong> HotpotQA evaluation, baseline comparisons, and experimental LoRA SFT / GRPO workflows.</li>
+                        <li><strong class="text-white">System Design:</strong> Separate search, memory-management and answer modules; BM25 retrieval, evidence updates, and final answers with source citations.</li>
+                        <li><strong class="text-white">Staged RL:</strong> LoRA + GRPO first trains evidence retention with fixed retrieval and answering; then trains query rewriting and stopping with the memory and answer modules frozen.</li>
+                        <li><strong class="text-white">Reward Design:</strong> Final-answer F1 and invalid-action penalties guide policy updates.</li>
+                        <li><strong class="text-white">Evaluation Scope:</strong> Results reported on a 200-question HotpotQA candidate-pool evaluation; memory-policy RL improved F1 by 3.00%, with an additional 1.97% improvement after search-policy RL.</li>
                     </ul>
+                    <div class="grid md:grid-cols-2 gap-4 text-xs text-gray-400 mb-6">
+                        <p><strong class="highlight">F1 +5.63%:</strong> Compared with the fixed-summary baseline in the reported 200-question evaluation.</p>
+                        <p><strong class="highlight">Search Calls -46.15%:</strong> Reduction in average search count in the same evaluation.</p>
+                    </div>
                     <a href="https://github.com/WitBlue6/memsearch-rl" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 font-medium hover:text-white transition-colors"><i class="fab fa-github mr-2"></i>View Repository</a>
                 </div>
 
